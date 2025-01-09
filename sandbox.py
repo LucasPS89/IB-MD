@@ -1,6 +1,8 @@
 import ib_async
 
+
 #ib_async.util.logToConsole("DEBUG")
+
 
 ib = ib_async.IB()
 
@@ -11,7 +13,12 @@ ib.connect(port=4002) #DEMO
 #: list[ib_async.Ticker]
 def wait_for_market_data(ticker: list[ib_async.ticker.Ticker]):
       """print tickers as they arrive"""
+      # for t in ticker:
+      #       for tick in t.ticks:
+      #             print(tick)
+
       print(ticker)
+      #print(ticker.ticks)
       # for t in ticker:
       #       #Data to stocker
       #       print(t.time.strftime("%m/%d/%Y, %H:%M:%S.%f"), "->", "bid:", t.bid, " bidSize:", t.bidSize, " ask:", t.ask, " askSize:", t.askSize,
@@ -66,12 +73,20 @@ def wait_for_market_data(ticker: list[ib_async.ticker.Ticker]):
 #     #print(market_data[ticker])
 #     ib.pendingTickersEvent += wait_for_market_data
 
+#Set MD to delayed
+ib.reqMarketDataType(3)
 
-ib_async.contract.
-
+#Single contract (TEST)
 #contract = ib_async.Forex("EURUSD")
 #contract = ib_async.Future(symbol="ZS", exchange="CBOT", localSymbol="ZSK5") ##Soybean May 2025
 contract = ib_async.Future(symbol="ZC", exchange="CBOT", localSymbol="ZCZ5") ##Corn Dec 2025
+ib.reqMktData(contract, '', False, False)
+
+#all SOYBEAN OIL CONTRACTS
+#soybean_oil = ib_async.Future('ZL', exchange="CBOT")
+#cds = ib.reqContractDetails(soybean_oil)
+#contracts = [ib.reqMktData(cd.contract, '', False, False) for cd in cds]
+
 #Check current quote
 #https://www.cmegroup.com/markets/agriculture/oilseeds/soybean.quotes.html
 #https://www.cmegroup.com/markets/agriculture/grains/corn.html
@@ -80,26 +95,20 @@ contract = ib_async.Future(symbol="ZC", exchange="CBOT", localSymbol="ZCZ5") ##C
 #https://github.com/erdewit/ib_insync/blob/master/notebooks/tick_data.ipynb
 
 
+#print(ib_async.util.df(contracts))
 
-ib.reqMarketDataType(3)
-ib.reqMktData(contract, '', False, False)
+
+
+
 #ib.reqTickByTickData(contract, 'BidAsk')
 
 ib.pendingTickersEvent += wait_for_market_data
 ticker = ib.ticker(contract)
-#ib.sleep(5)
-#print(ticker)
-#ib.sleep(5)
-#print(ticker)
 
-ib.run()
 
-# wait for tickers to fill
-#ib.sleep(30)
-#print(market_data)
+def main():
+    #Keep running
+    ib.run()
 
-#print("wait for pendingTickersEvent to produce data")
-#ib.sleep(30)
-#_ = [ib.cancelMktData(_c) for _c in contracts.values()]
-#print("the end")
-#ib.disconnect()
+if __name__ == "__main__":
+    main() 
