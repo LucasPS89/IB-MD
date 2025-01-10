@@ -88,6 +88,7 @@ def main():
     ib.reqMarketDataType(3)
 
     #Request MD
+    #TODO:Read from TXT file what commodities to scan for prices
     #Single contract (TEST)
     #contract = ib_async.Forex("EURUSD")
     #contract = ib_async.Future(symbol="ZS", exchange="CBOT", localSymbol="ZSK5") ##Soybean May 2025

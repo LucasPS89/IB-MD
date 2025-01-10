@@ -1,0 +1,42 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram name="Page-1" id="sJXXHcOdjypO53yqfjd1">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://br.investing.com/brokers/wp-content/uploads/sites/3/2023/03/Interactive-Brokers.png;" vertex="1" parent="1">
+          <mxGeometry x="90" y="60" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qh5XXG3_9jgzbskuX3pz-4" target="Qh5XXG3_9jgzbskuX3pz-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-19" value="Connects via&amp;nbsp;&lt;span style=&quot;color: rgb(78, 201, 176); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; white-space-collapse: preserve;&quot;&gt;ib_async&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Qh5XXG3_9jgzbskuX3pz-12">
+          <mxGeometry x="0.2802" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Qh5XXG3_9jgzbskuX3pz-4" target="Qh5XXG3_9jgzbskuX3pz-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-4" value="IB-MD" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="410" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-10" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="250" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-7" value="&amp;nbsp; &amp;nbsp;IB-Gateway&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22image%3Bsketch%3D0%3Baspect%3Dfixed%3Bhtml%3D1%3Bpoints%3D%5B%5D%3Balign%3Dcenter%3BfontSize%3D12%3Bimage%3Dimg%2Flib%2Fmscae%2FDocker.svg%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22480%22%20y%3D%22349.5%22%20width%3D%2250%22%20height%3D%2241%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="Qh5XXG3_9jgzbskuX3pz-10">
+          <mxGeometry width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-8" value="" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="Qh5XXG3_9jgzbskuX3pz-10">
+          <mxGeometry x="80" y="7.25" width="67.68" height="55.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-11" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space-collapse: preserve;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;gnzsnz Docker Image &lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space-collapse: preserve;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;Connects to IB &lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space-collapse: preserve;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;without human interaction&lt;/span&gt;&lt;/div&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qh5XXG3_9jgzbskuX3pz-7" target="Qh5XXG3_9jgzbskuX3pz-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qh5XXG3_9jgzbskuX3pz-14" value="Store data into DynamoDB &#xa;table for the day. &#xa;I.E Futures_20241231" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://isagebrum.com/images/technology/dynamo_db-image.svg;" vertex="1" parent="1">
+          <mxGeometry x="250" y="395" width="100.63" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
