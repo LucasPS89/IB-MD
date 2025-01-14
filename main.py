@@ -4,7 +4,6 @@ import jsonpickle
 from datetime import datetime
 import time
 
-#ib_async.util.logToConsole("DEBUG")
 ib = ib_async.IB()
 dynamodb = boto3.resource('dynamodb')
 table_name = f"FutureTicks1-{datetime.now().strftime("%Y%m%d")}"
