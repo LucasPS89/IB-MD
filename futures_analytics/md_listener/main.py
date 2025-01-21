@@ -20,7 +20,7 @@ def create_dynamo_table():
                     'KeyType': 'HASH'
                 },
                 {
-                    'AttributeName': 'time',
+                    'AttributeName': 'timestamp',
                     'KeyType': 'RANGE'
                 }
             ],
@@ -30,7 +30,7 @@ def create_dynamo_table():
                     'AttributeType': 'S'
                 },
                 {
-                    'AttributeName': 'time',
+                    'AttributeName': 'timestamp',
                     'AttributeType': 'S'
                 },
             ],
@@ -58,7 +58,7 @@ def wait_for_market_data(ticker: list[ib_async.ticker.Ticker]):
 
             dynamodb.Table(table_name).put_item(Item={
                 'contract':f"{t.contract.exchange}_{t.contract.symbol}_{t.contract.localSymbol}",
-                'time':t.time.strftime("%m/%d/%Y, %H:%M:%S.%f"),
+                'timestamp':t.time.strftime("%m/%d/%Y, %H:%M:%S.%f"),
                 'ticker': jsonpickle.encode(t)
             })
             frozen = jsonpickle.encode(t)
@@ -89,20 +89,28 @@ def main():
     #Request MD
     #TODO:Read from TXT file what commodities to scan for prices
     #Single contract (TEST)
-    #contract = ib_async.Forex("EURUSD")
+    # contract = ib_async.Forex("EURUSD")
     #contract = ib_async.Future(symbol="ZS", exchange="CBOT", localSymbol="ZSK5") ##Soybean May 2025
-    contract = ib_async.Future(symbol="ZC", exchange="CBOT", localSymbol="ZCZ5") ##Corn Dec 2025
-    ib.reqMktData(contract, '', False, False)
+    #contract = ib_async.Future(symbol="ZC", exchange="CBOT", localSymbol="ZCZ5") ##Corn Dec 2025
+    # ib.reqMktData(contract, '', False, False)
+    # ib.pendingTickersEvent += wait_for_market_data
+
+    #Simpler data with Forex
+    cds = ib_async.Forex("EURUSD")
+    ib.reqMktData(cds)
     ib.pendingTickersEvent += wait_for_market_data
-
-
-    #all SOYBEAN OIL CONTRACTS
-    #soybean_oil = ib_async.Future('ZL', exchange="CBOT")
-    #cds = ib.reqContractDetails(soybean_oil)
-    #contracts = [ib.reqMktData(cd.contract, '', False, False) for cd in cds]
-
-    #Keep running
     ib.run()
+
+    #all CORN OPTIONS CONTRACTS
+    #corn_options = ib_async.FuturesOption('ZC', exchange="CBOT")
+    #corn_options = ib_async.FuturesOption('ZC', exchange="CBOT")
+    #corn_options = ib_async.Forex("EURUSD")
+    #cds = ib.reqContractDetails(corn_options)
+    # if cds:
+    #     contracts = [ib.reqMktData(cd.contract, '', False, False) for cd in cds]
+    #     ib.pendingTickersEvent += wait_for_market_data
+    #     #Keep running if found at least 1 matching contract
+    #     ib.run()
 
 if __name__ == "__main__":
     main() 
